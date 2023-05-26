@@ -1,0 +1,37 @@
+body {
+  background-color: #1d267d;
+  /*background-image: "cloud.png";*/
+  text-align: center;
+  /*background-image: url("assets/images/microphone 2.png");*/
+
+}
+
+header {
+  font-family: "Monoton", cursive;
+  font-size: 60px;
+  font-weight: normal;
+  color: lightgreen;
+  text-align: left;
+}
+
+header img {
+  width: 90px;
+  margin: 0;
+}
+
+#container {
+  width: 60%;
+  /*width: 800px;*/
+  height: 300px;
+  background-color: #5C469C;
+  margin: 80px auto 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 0 10px;
+  /*justify-content: center;*/
+  /*box-sizing: content-box;*/
+}
+
+
+Add all the values of A1 to A9

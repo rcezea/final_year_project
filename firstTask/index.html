@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FORsheets</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+	  <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="title">FORsheets</header>
+    <div id="container">
+        <div id="container-header">
+            <section><h3>Text</h3></section>
+            <section id="section-center"><h3>Convert</h3></section>
+            <section><h3>Formula</h3></section>
+        </div>
+        <div id="converter">
+            <div id="entry-div">
+                <textarea id="entry" placeholder="Enter text here"></textarea>
+                <button onclick="runSpeechRecog()" id="microphone-button" type="submit"><img id="microphone" src="assets/images/microphone2.png" alt="" ></button>
+            </div>
+            <div id="conv-div">
+                <button id="convert-button" type="submit"><img id="convert-icon" src="assets/images/conv1.png" alt="Conversion icon"></button>
+            </div>
+            <div id="result-div">
+                <textarea id="result" disabled></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="assets/scripts/index.js"></script>
+  </body>
+</html>
