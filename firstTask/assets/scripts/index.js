@@ -13,18 +13,12 @@ $('#microphone-button').on("click", function () {
     recognization.start();
   }
 })
-
-
-
-
-
 // noinspection JSUnresolvedReference
 $("#convert-button").on("click", function () {
   // noinspection JSUnresolvedReference
   let input = $("#entry").val();
   conversion(input)
 });
-  
 function conversion (input){
   // const instructions = 'These are the instructions:' +
   //     '1. Create spreadsheet formula based on user input' +
@@ -67,30 +61,3 @@ function conversion (input){
     $("#result").val(response.choices[0].text);
   });
 }
-
-
-// const settings = {
-//   async: true,
-//   crossDomain: true,
-//   url: "https://api.openai.com/v1/completions",
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//     Authorization: `Bearer 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`,
-//   },
-//   processData: false,
-//   data: JSON.stringify({
-//     model: "text-davinci-003",
-//     prompt: `Correct this to standard English:\n\n${}.`,
-//     temperature: 0,
-//     max_tokens: 60,
-//     top_p: 1.0,
-//     frequency_penalty: 0.0,
-//     presence_penalty: 0.0,
-//   }),
-// };
-//
-// $.ajax(settings).done(function(response) {
-//     console.log(response);
-// });
-
