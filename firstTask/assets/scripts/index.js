@@ -1,5 +1,6 @@
 const key = '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'
 $('#microphone-button').on("click", function () {
+  runSpeechRecog = () => {
     $("entry").val("Loading text...");
     var output = document.getElementById('entry');
     // var action = document.getElementById('action');
@@ -11,6 +12,7 @@ $('#microphone-button').on("click", function () {
       output.innerHTML = e.results[0][0].transcript;
     }
     recognization.start();
+  }
 })
 // noinspection JSUnresolvedReference
 $("#convert-button").on("click", function () {
@@ -25,7 +27,7 @@ function conversion (input){
   const settings = {
     async: true,
     crossDomain: true,
-    // url: ,
+    url: "https://api.openai.com/v1/completions",
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -43,7 +45,7 @@ function conversion (input){
     })
   };
 
-  $.ajax("https://api.openai.com/v1/completions", settings).done(function(response) {
+  $.ajax(settings).done(function(response) {
     console.log(response);
     $("#result").val(response.choices[0].text);
   });
