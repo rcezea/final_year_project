@@ -1,6 +1,5 @@
 const key = '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'
 $('#microphone-button').on("click", function () {
-  runSpeechRecog = () => {
     $("entry").val("Loading text...");
     var output = document.getElementById('entry');
     // var action = document.getElementById('action');
@@ -12,7 +11,6 @@ $('#microphone-button').on("click", function () {
       output.innerHTML = e.results[0][0].transcript;
     }
     recognization.start();
-  }
 })
 // noinspection JSUnresolvedReference
 $("#convert-button").on("click", function () {
