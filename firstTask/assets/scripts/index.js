@@ -30,7 +30,7 @@ function conversion (input){
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer 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`,
     },
     processData: false,
     data: JSON.stringify({
