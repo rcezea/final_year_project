@@ -1,3 +1,4 @@
+const key = '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'
 $('#microphone-button').on("click", function () {
   runSpeechRecog = () => {
     $("entry").val("Loading text...");
@@ -26,11 +27,11 @@ function conversion (input){
   const settings = {
     async: true,
     crossDomain: true,
-    url: "https://api.openai.com/v1/completions",
+    // url: ,
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer ${key}`,
     },
     processData: false,
     data: JSON.stringify({
@@ -41,22 +42,10 @@ function conversion (input){
       top_p: 1.0,
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
-      // instructions: `${instructions}`,
-      // messages: {
-      //   0: {"prompt": "Add A1 to A9", "completion": "=SUM(A1:A9)"},
-      //   1: {
-      //     "prompt": "This is not a text to formula",
-      //     "completion": "Please enter a statement you want converted to a spreadsheet formula"
-      //   },
-      //   2: {
-      //     "prompt": "My name is Dave",
-      //     "completion": "Please enter a statement you want converted to a spreadsheet formula"
-      //   }
-      // },
     })
   };
 
-  $.ajax(settings).done(function(response) {
+  $.ajax("https://api.openai.com/v1/completions", settings).done(function(response) {
     console.log(response);
     $("#result").val(response.choices[0].text);
   });
